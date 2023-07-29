@@ -4680,7 +4680,7 @@ header {
     font-size: 60px; }
   
   .ss-sprite {
-    background: url("spritesai.svg");
+    background: url("https://raw.githubusercontent.com/slmsshk/slmsshk.github.io/main/spritesai.svg");
     display: inline-block;
     margin: 0 auto;
     background-repeat: no-repeat;
