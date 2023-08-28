@@ -31,7 +31,7 @@ header {
       header .navbar-brand.active {
         display: block !important; } }
     header .navbar-brand img {
-      width: 200px; }
+      width: 50px; }
     header .navbar-nav {
       margin-left: 100px; }
       @media (max-width: 1280px) {
@@ -721,7 +721,7 @@ header {
         color: #101010; }
       #PersonalisedMentorship .tab-content .ss-mentorship-video {
         background: #575353;
-        height: 300px;
+        height: 200px;
         max-width: 68%;
         display: flex;
         align-items: center;
@@ -1453,66 +1453,7 @@ header {
             font-size: 18px; }
   
 
-  
-  #FAQ {
-    background: #e59000; }
-    #FAQ .accordion {
-      background: #fff;
-      padding: 20px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      margin-top: 30px; }
-      #FAQ .accordion h4 {
-        color: #222;
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0px;
-        padding: 10px 0 10px 13px; }
-      #FAQ .accordion h5 {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0px;
-        color: #222;
-        font-size: 16px;
-        padding: 25px 10px;
-        width: 100%;
-        cursor: pointer;
-        position: relative; }
-        #FAQ .accordion h5::after {
-          box-sizing: border-box;
-          height: 8px;
-          width: 8px;
-          border-style: solid;
-          border-color: #69696e;
-          border-width: 0px 2px 2px 0px;
-          position: relative;
-          top: 0px;
-          padding: 2px;
-          content: "";
-          -webkit-transition: all 300ms ease;
-          -moz-transition: all 300ms ease;
-          -ms-transition: all 300ms ease;
-          -o-transition: all 300ms ease;
-          transition: all 300ms ease;
-          -webkit-transform: rotate(-45deg);
-          -moz-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-        #FAQ .accordion h5[aria-expanded="true"]::after {
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          transform: rotate(45deg); }
-      #FAQ .accordion .faq-card {
-        border-bottom: 1px solid #d8d8d8; }
-        #FAQ .accordion .faq-card:last-child {
-          border: 0px; }
-        #FAQ .accordion .faq-card .faq-card-body {
-          padding-left: 20px;
-          margin-bottom: 20px; }
+
   
   .counselling-form {
     background: #f4f7fa;
@@ -4069,7 +4010,7 @@ header {
     #Fee .btn-orange, #Fee .btn-orange-outline {
       padding: .445rem .75rem !important; }
     #Fee .adjust-height {
-      height: auto;
+      height: 100px;
       display: flex; }
     #Fee .card {
       padding: 0px; }
@@ -4945,12 +4886,12 @@ header {
       height: 70px;
       background-position: -12px -797px;
       background-size: 400%; }
-    .ss-sprite.ss-project {
+    .ss-sprite.av-project {
       width: 32px;
       height: 34px;
       background-position: -17px -446px;
       transform: scale(2.3); }
-    .ss-sprite.ss-assignments {
+    .ss-sprite.av-assignments {
       width: 32px;
       height: 29px;
       background-position: -16px -465px;
@@ -4987,209 +4928,7 @@ header {
     .ss-sprite2.kripya {
       background-position: -8px -94px; }
   
-  /*FONTS SIZE*/
-  /*FONTS WEIGHT*/
-  /*BORDER COLORS*/
-  /*BORDER RADIUS*/
-  .cookies-backdrop {
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1021;
-    display: none; }
-    .cookies-backdrop.active {
-      display: block; }
-  
-  .cookies-based-content {
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1022;
-    padding: 3rem;
-    font-weight: 500 !important; }
-    .cookies-based-content p {
-      font-size: 14px;
-      text-align: center;
-      margin: 0px;
-      color: #4a4a4a; }
-    .cookies-based-content a {
-      color: #0d47a1; }
-    .cookies-based-content .btn-bl {
-      background: transparent;
-      color: #004479;
-      min-width: 100px;
-      border: solid 2px #004479;
-      margin: 0 5px;
-      padding: 2px;
-      font-size: 12px;
-      border-radius: 50px;
-      width: 190px; }
-      .cookies-based-content .btn-bl:hover, .cookies-based-content .btn-bl:focus {
-        color: #0d47a1 !important; }
-      .cookies-based-content .btn-bl.btn-fill {
-        background-color: #0d47a1 !important;
-        color: #fff !important; }
-    .cookies-based-content .close {
-      border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      border: solid 1px #d8d8d8;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      font-size: 24px;
-      text-align: center;
-      cursor: pointer; }
-    @media (max-width: 599px) {
-      .cookies-based-content .justify-content-end {
-        justify-content: center !important;
-        margin-top: 10px; } }
-    .cookies-based-content h6 {
-      color: #0d47a1 !important; }
-  
-  #cookiesModal .modal-title {
-    font-size: 13px;
-    color: #222;
-    font-weight: 400; }
-  
-  #cookiesModal .modal-body .nav-item {
-    width: calc(100% / 3); }
-    #cookiesModal .modal-body .nav-item .nav-link {
-      width: 100%;
-      text-align: center;
-      border: 0px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #222;
-      padding: 12px;
-      background-color: white !important; }
-      #cookiesModal .modal-body .nav-item .nav-link.active {
-        color: #0d47a1;
-        border-bottom: 3px solid #0d47a1; }
-  
-  #cookiesModal .modal-body #myTabContent #consent h6, #cookiesModal .modal-body #myTabContent #about h6 {
-    font-size: 14px;
-    color: #222;
-    font-weight: 500; }
-  
-  #cookiesModal .modal-body #myTabContent #consent p, #cookiesModal .modal-body #myTabContent #about p {
-    font-size: 14px;
-    color: #222;
-    font-weight: 400; }
-  
-  #cookiesModal .modal-body #myTabContent #details {
-    height: 500px;
-    overflow-y: scroll; }
-    #cookiesModal .modal-body #myTabContent #details::-webkit-scrollbar {
-      width: 3px; }
-    #cookiesModal .modal-body #myTabContent #details::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px; }
-    #cookiesModal .modal-body #myTabContent #details::-webkit-scrollbar-thumb {
-      background: #222;
-      border-radius: 10px; }
-    #cookiesModal .modal-body #myTabContent #details .accordion-item {
-      border: 0px;
-      border-bottom: 2px solid #eceff1; }
-      #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button {
-        background-color: #fff;
-        box-shadow: none;
-        padding: 16px;
-        padding-left: 30px;
-        border: 0px;
-        position: relative; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button:hover h6 {
-          color: #0d47a1; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button:hover::after {
-          border-color: #0d47a1 !important; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button:after {
-          content: '';
-          height: 8px;
-          width: 8px;
-          border-left: 2px solid black;
-          border-bottom: 2px solid black;
-          position: absolute;
-          top: 18px;
-          left: 10px;
-          transition: transform 0.3s;
-          transform: rotate(135deg); }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button h6 {
-          font-size: 14px;
-          color: #222;
-          font-weight: 700;
-          text-align: left; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button p {
-          font-size: 14px;
-          color: #222;
-          font-weight: 400;
-          padding-left: 15px;
-          text-align: left; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button .badge {
-          position: relative;
-          left: 2px;
-          bottom: 2px; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-item .accordion-button.collapsed::after {
-          transform: rotate(-45deg); }
-    #cookiesModal .modal-body #myTabContent #details .accordion-collapse {
-      padding-left: 15px; }
-      #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item {
-        border: 1px solid #eceff1;
-        margin: 10px;
-        border-radius: 10px; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-button {
-          padding: 25px 30px;
-          border-radius: 10px;
-          width: 100%;
-          text-align: left; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-button a {
-            font-size: 14px;
-            color: #0d47a1;
-            z-index: 999; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-button.collapsed:hover {
-            background-color: #eceff1; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-button::after {
-            right: 15px;
-            left: initial; }
-        #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card {
-          background-color: #eceff1;
-          border-radius: 10px; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card .card-body h6 {
-            font-size: 14px;
-            font-weight: 700; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card .card-body p {
-            font-size: 14px;
-            font-weight: 400; }
-          #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card .card-footer {
-            background-color: transparent; }
-            #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card .card-footer p {
-              font-weight: 500; }
-              #cookiesModal .modal-body #myTabContent #details .accordion-collapse .accordion-item .accordion-body .card .card-footer p span {
-                font-weight: 400; }
-    #cookiesModal .modal-body #myTabContent #details p {
-      font-size: 14px;
-      color: #222; }
-  
-  #cookiesModal .btn {
-    width: 235px; }
-    @media (max-width: 599px) {
-      #cookiesModal .btn {
-        width: 100%; } }
-  #cookiesModal .btn-info {
-    background-color: #0d47a1;
-    border-color: #0d47a1;
-    color: #fff; }
-  
-  #cookiesModal .btn-outline-info {
-    border-color: #0d47a1;
-    color: #0d47a1;
-    background-color: transparent; }
-  
-  #cookiesModal a {
-    color: #0d47a1 !important; }
-  
+
   .pointer {
     cursor: pointer; }
   
@@ -5555,11 +5294,9 @@ header {
         border-radius: 50%;
         animation: pulse-border 1500ms ease-out infinite; }
       .play-button .play-btn:after {
-        content: "";
         position: absolute;
         width: 68px;
         height: 68px;
-        background: url("video_player.png") no-repeat 100% 100%;
         background-size: contain;
         top: 0;
         right: 0;
@@ -5676,7 +5413,16 @@ header {
     .header-btn-hide.active-btn {
       display: block; }
   
-  .header-top {
+  .header-btn-hide1 {
+    display: none; }
+    @media (max-width: 991px) {
+      .header-btn-hide1 {
+        display: block;
+        margin-top: 10px; } }
+    .header-btn-hide1.active-btn {
+      display: block; }
+  
+    .header-top {
     background: #2d2d2d;
     padding: 10px 0;
     margin: 0 0 0px 0;
@@ -5843,3 +5589,291 @@ header {
     .ss-loader.loaded {
       -webkit-transition: 0.5s all ease-in-out;
       transition: 0.5s all ease-in-out; }
+
+
+      #Fee {
+        background: #2d2b33; }
+        #Fee .ticker-img {
+          position: absolute;
+          top: -9px !important;
+          right: -78px !important;
+          width: 200px !important; }
+          @media (max-width: 767px) {
+            #Fee .ticker-img {
+              display: table;
+              margin: auto;
+              position: relative;
+              top: 0px;
+              right: 0px;
+              width: 115px; } }
+        #Fee .heading-with-text {
+          font-weight: 300;
+         }
+        @media (max-width: 991px) {
+          #Fee .col-lg-8 {
+            display: flex;
+            flex-direction: column;
+            order: 1; } }
+        @media (max-width: 991px) {
+          #Fee .order-change {
+            order: 1; } }
+        #Fee .card-grid {
+          width: 45%;
+          margin-left: 15px;
+          margin-right: 15px;
+          float: left;
+          margin-bottom: 30px; }
+          @media (max-width: 1120px) {
+            #Fee .card-grid {
+              width: 100%; } }
+          @media (max-width: 1023px) {
+            #Fee .card-grid {
+              width: 92%;
+              padding: 5px; } }
+          #Fee .card-grid p {
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 0px;
+            margin-top: 1rem; }
+        #Fee .btn-orange, #Fee .btn-orange-outline {
+          padding: .445rem .75rem !important; }
+        #Fee .adjust-height {
+          height: auto;
+          display: flex; }
+        #Fee .card {
+          padding: 0px; }
+          @media (max-width: 1023px) {
+            #Fee .card {
+              width: 100%; } }
+          #Fee .card .content-header {
+            background: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%; }
+            #Fee .card .content-header p {
+              margin: 0 0 10px 0;
+              font-size: 12px; }
+            #Fee .card .content-header img {
+              max-width: 100%; }
+          #Fee .card .card-body {
+            padding: 20px !important; }
+          #Fee .card .header-card {
+            padding: 20px; }
+            #Fee .card .header-card h2 {
+              color: #222;
+              font-size: 24px;
+              font-weight: 300;
+              margin-bottom: 5px;
+              color: white; }
+            #Fee .card .header-card h4 {
+              font-size: 18px;
+              margin-bottom: 3px;
+              color: #007aff;
+              cursor: pointer; }
+              #Fee .card .header-card h4 span {
+                color: #101010; }
+          #Fee .card .clear-gap {
+            clear: both;
+            width: 100%;
+            float: left; }
+          #Fee .card h3 {
+            color: #383636;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-bottom: solid 1px #d8d8d8;
+            padding-bottom: 10px; }
+          #Fee .card h6 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #4a4a4a; }
+          #Fee .card ul {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            float: left;
+            padding-bottom: 25px; }
+            #Fee .card ul li {
+              width: 100%;
+              list-style: disc;
+              color: #007adc;
+              font-size: 36px;
+              line-height: 1;
+              margin-left: 27px; }
+              #Fee .card ul li span {
+                color: #69696e;
+                font-size: 16px;
+                vertical-align: middle; }
+        #Fee h6 {
+          color: #383636;
+          font-size: 18px;
+          text-align: center; }
+        #Fee h5 {
+          text-align: center;
+          font-size: 30px;
+          text-align: center;
+          color: #101010; }
+        #Fee small {
+          display: block;
+          text-align: center;
+          color: #101010; }
+      
+          #Fee .price-tag {
+            display: block;
+            margin: 15px 0; }      
+
+
+.video-player.embed-responsive.embed-responsive-16by9 {
+max-width: 100%;
+height: auto;
+}
+
+
+.yellow{
+  color: #f0be00;
+  font-weight: 700; }
+
+.small-text1{
+  font-size: 12px;
+}
+
+.highlight-box {
+ 
+  background-color: #333333; /* Dark gray */
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #00BFFF; /* Dodger blue text */
+}
+
+
+#Ratings{
+  /* background: #1f1f1f; */
+    padding: 10px 0; 
+  }
+  #Ratings img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; /* Center the images horizontally */
+    padding: 20px; /* Adjust the padding as needed */
+    border: #000;
+    border-width: 10px;
+  }
+
+  .card-image {
+    transform: scale(.6); 
+    margin: padding;
+  }
+
+
+#FAQ {
+  background-color: #000;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+  font-size: 16px; /* Increase font size */
+  padding: 4rem 0; /* Add padding for more space */
+}
+
+/*Section used for centering process*/
+#FAQ .section {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#FAQ .container{
+  width: 50%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+ .accordion-item{
+  background-color: #000000;
+  border-radius: .4rem;
+}
+
+.accordion-item hr{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.accordion-link{
+  font-size: 1.6rem;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.accordion-link h3{
+  font-weight:500;
+  font-size: 20px;
+}
+
+.accordion-link i{
+  color: #e7d5ff;
+  padding: .5rem;
+  
+}
+
+.accordion-link ul{
+  display:flex;
+  align-items: flex-end;
+  list-style-type: none;
+  margin-left: 25px;
+}
+
+.accordion-link li{
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 0 1px 5px;
+}
+
+.accordion-link div{
+  display: flex;
+}
+
+.accordion-link .ion-md-arrow-down{
+  display: none;
+}
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  transition: max-height 650ms;
+}
+
+
+
+.answer p{
+  color: #fff;
+  font-size: 15px;
+  padding: 2rem;
+  
+}
+
+.accordion-item:target .answer{
+  max-height: 20rem;
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-forward{
+  display: none
+}
+
+.accordion-item:target .accordion-link .ion-md-arrow-down{
+  display: block;
+}
+
