@@ -31,7 +31,7 @@ header {
       header .navbar-brand.active {
         display: block !important; } }
     header .navbar-brand img {
-      width: 50px; }
+      width: 100px; }
     header .navbar-nav {
       margin-left: 100px; }
       @media (max-width: 1280px) {
