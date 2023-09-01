@@ -1,0 +1,1647 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <title>Salemsit | Data Science, Ml, AI& BIA Institute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .bg-primary {
+            background: #548335 !important;
+        }
+        .bg-secondary {
+            background: #ffba21 !important;
+        }
+        .text-primary {
+            color: #548335 !important;
+        }
+        .text-secondary {
+            color: #ffba21 !important;
+        }
+        .border-primary {
+            border-color: #548335 !important;
+        }
+        .border-secondary {
+            border-color: #ffba21 !important;
+        }
+        .btn-primary {
+            background: #548335 !important;
+        }
+        .btn-secondary {
+            background: #ffba21 !important;
+        }
+        .banner {
+            background: #548335;
+            background-image: url(images/banner.jpg);
+            background-position: right;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 30px 0;
+        }
+        .banner .title {
+            font-size: 40px;
+        }
+        .about .usp {
+            border-right: 1px solid #c6c6c6;
+        }
+        .divider {
+            width: 80px;
+        }
+        .list ul {
+            list-style: none;
+        }
+        .whatsapp-fix {
+            bottom: 15px;
+            left: 15px;
+            right: auto;
+        }
+        .phone-fix {
+            bottom: 5px;
+            left: 5px;
+            right: auto;
+        }
+        @media (max-width:767px) {
+            .banner .title {
+                font-size: 40px;
+            }
+        }
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        .wrapper {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .countdown {
+            display: flex;
+        }
+        .countdown.remove {
+            animation: hide-countdown 1s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+            overflow: hidden;
+        }
+        .number,
+        .separator {
+            display: block;
+            color: #333;
+            font-size: 20px;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+        .separator {
+            margin: 0;
+            width: 2rem;
+        }
+        .new,
+        .old,
+        .current {
+            color: #333;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+        }
+        .new {
+            animation: show-new 0.4s cubic-bezier(0, 0.9, 0.5, 1.2) forwards;
+        }
+        .old {
+            animation: hide-old 2s cubic-bezier(0, 0.9, 0.56, 1.2) forwards;
+        }
+        .countdown section {
+            position: relative;
+        }
+        #js-days:after,
+        #js-hours:after,
+        #js-minutes:after,
+        #js-seconds:after {
+            content: "DAYS";
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: -20px;
+            font-size: 12px;
+        }
+        #js-hours:after {
+            content: "HOURS";
+        }
+        #js-minutes:after {
+            content: "MINUTES";
+        }
+        #js-seconds:after {
+            content: "SECONDS";
+        }
+        @keyframes hide-countdown {
+            to {
+                height: 0;
+                overflow: hidden;
+            }
+        }
+        @keyframes show-new {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateY(-2rem) scale(0.8) rotateX(-20deg);
+            }
+            100% {
+                transform: translate(-50%, -50%);
+            }
+        }
+        @keyframes hide-old {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) translateY(-5rem) scale(0.5) rotateX(-75deg);
+            }
+        }
+        .nav {
+            box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.1)
+        }
+        .nav button {
+            font-size: 16px;
+            color: #333;
+        }
+        .nav button.active {
+            background: #548335 !important;
+            color: #fff;
+        }
+        .program .card img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .bg-light {
+            background: #eee !important;
+        }
+        header nav .navbar-brand img {
+            max-width: 280px;
+        }
+        header nav .navbar-collapse {
+            justify-content: right;
+            padding-right: 20px;
+        }
+        header nav .navbar-toggler {
+            border: 2px solid #548335;
+        }
+        header nav .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        header nav .navbar-nav .nav-link {
+            color: #363636;
+        }
+        header nav .navbar-nav .nav-link.active {
+            color: #548335;
+        }
+        header nav .navbar-text {
+            color: #548335;
+        }
+        .carousel-caption {
+            right: auto;
+            top: 30%;
+            left: 8%;
+            text-align: left;
+        }
+        .carousel-control-next,
+        .carousel-control-prev {
+            width: 5%;
+        }
+        .fix-btn .live-chat a {
+            position: fixed;
+            bottom: 0;
+            right: 5px;
+            height: 56px;
+            line-height: 56px;
+            padding: 0px 20px;
+        }
+        .nav-pills .nav-link{
+            border:1px solid #548335;
+        }
+        .nav-pills .nav-link:hover{
+            color:#548335;
+        }
+        .nav-pills .nav-link.active:hover{
+            color:#fff;
+        }
+        .tab-content>.tab-pane{
+            border:1px solid #548335;
+            padding:20px;
+            border-radius:5px;
+        }
+        .accordion ul{
+            margin-bottom:0;
+        }
+        button.accordion-button{
+            border:1px solid #548335;
+            background:#548335!important;
+            color:#fff!important;
+        }
+        button.accordion-button:focus{
+            box-shadow:none;
+            border:none;
+        }
+        .accordion-button:not(.collapsed)::after{
+            background-image:var(--bs-accordion-btn-icon)
+        }
+        button.accordion-button.collapsed{
+            border:1px solid #548335;
+            background:#f2f2f2!important;
+            color:#363636!important;
+        }
+        .accordion-collapse.collapse.show{
+            background:#f2f2f2;
+            border:1px solid #548335;
+        }
+        footer{
+            margin-bottom:56px;
+        }
+        footer .social a{
+            border:1px solid #fff;
+            background:#fff;
+            border-radius:50%;
+            font-size:20px;
+            line-height:30px;
+            width:30px;
+            height:30px;
+            text-align:center;
+            margin-right:10px;
+        }
+
+        .body1{
+            box-shadow: 0 5px 22px rgb(0 0 0 / 32%);
+            min-height: 350px;
+             padding-left: 10px; 
+             padding-right: 10px;
+              padding-top: 10px; 
+              margin-bottom: 20px;
+              margin-top: 20px;
+              background: #fff;
+        }
+        .body1 h5{
+            font-size: 16px;
+        }
+        .body2{
+            box-shadow: 0 5px 22px rgb(0 0 0 / 32%);
+            min-height: 330px;
+             padding-left: 10px; 
+             padding-right: 10px;
+              padding-top: 10px; 
+              margin-bottom: 20px;
+              margin-top: 20px;
+              background: #fff;
+        }
+        .body2 h5{
+            font-size: 16px;
+        }
+        .body3{
+            box-shadow: 0 5px 22px rgb(0 0 0 / 32%);
+            min-height: 610px;
+             padding-left: 10px; 
+             padding-right: 10px;
+              padding-top: 10px; 
+              margin-bottom: 20px;
+              margin-top: 20px;
+              background: #fff;
+        }
+        .body3 h5{
+            font-size: 16px;
+        }
+        @media (min-width:768px) {
+            .projects .project {
+                min-height: 274px;
+            }
+        }
+        @media (max-width:768px) {
+            .banner-slider .carousel-caption {
+                top: 10%;
+            }
+            .banner-slider .carousel-caption h1 {
+                font-size: 15px;
+            }
+            .banner-slider .carousel-caption h4 {
+                font-size: 13px;
+            }
+            .fix-btn{
+                background:transparent!important;
+            }
+            .sk{
+            margin-left: 0px !important;
+    margin-top: 0px!important;
+            }
+            .sk2 h5 {
+
+                text-align: left !important; 
+                padding-right: 0px !important ;  
+              } 
+
+              .sk1{
+            margin-left: 0px !important;
+            padding-bottom: 10px ;
+         }
+        }
+         .sk1{
+            margin-left: 30%;
+         }
+        .sk {
+            margin-left: 27%;
+    margin-top: 25%;
+}
+    </style>
+</head>
+<body>
+    <header class="text-primary">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 px-sm-1">
+                    <nav class="navbar navbar-expand-lg p-0">
+                        <div class="logo p-2">
+                            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" href="#about">About Us</a>
+                                <a class="nav-link" href="#programs">Programs</a>
+                                <a class="nav-link" href="#program-highlights">Program Highlights</a>
+                                <!-- <a class="nav-link" href="#curriculum">Curriculum</a> -->
+                                <a class="nav-link" href="#faqs">FAQs</a>
+                                <a class="nav-link" href="#footer">Contact Us</a>
+                            </div>
+                        </div>
+                        <span class="navbar-text">
+                            <div class="contact d-flex align-items-center justify-content-end w-100">
+                                <div class="phone px-1 d-none d-sm-block">
+                                    <h6 class="mb-0"><i class="fa fa-phone"></i> +91 7977426509 </h6>
+                                </div>
+                            </div>
+                        </span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-slider">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/slide-1.jpg" class="d-block w-100 img-fluid" alt="">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8 col-md-8">
+                                        <h1 class="fw-bolder mb-2 mb-sm-3">Post Graduate Program in Data Science</h1>
+                                        <h4 class="mb-2 mb-sm-3">Accelerate your career with Data Science</h4>
+                                        <a href="#enquiry"
+                                            class="btn btn-primary border-0 py-3 px-4 d-none d-sm-inline-block">Enquire
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slide-2.jpg" class="d-block w-100 img-fluid" alt="">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8 col-md-8">
+                                        <h1 class="fw-bolder mb-2 mb-sm-3">Post Graduate Program in Data Science</h1>
+                                        <h4 class="mb-2 mb-sm-3">Accelerate your career with Data Science</h4>
+                                        <a href="#enquiry"
+                                            class="btn btn-primary border-0 py-3 px-4 d-none d-sm-inline-block">Enquire
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/slide-3.jpg" class="d-block w-100 img-fluid" alt="">
+                        <div class="carousel-caption">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8 col-md-8">
+                                        <h1 class="fw-bolder mb-2 mb-sm-3">Post Graduate Program in Data Science</h1>
+                                        <h4 class="mb-2 mb-sm-3">Accelerate your career with Data Science</h4>
+                                        <a href="#enquiry"
+                                            class="btn btn-primary border-0 py-3 px-4 d-none d-sm-inline-block">Enquire
+                                            Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section class="about py-5 bg-light" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 px-sm-1">
+                        <div class="heading mb-4">
+                            <h4 class="fw-bolder">Top-notch Data Science Post Graduate Program</h4>
+                        </div>
+                        <p>In this data science course, learn to make data-driven decisions through one of the best data
+                            science programs that deliver a high-engagement learning experience while leveraging
+                            Caltech’s academic excellence.</p>
+                        <div class="txt-img d-flex align-items-center mb-5">
+                            <h6 class="mb-0 me-3">In Collaboration with</h6>
+                            <img src="images/Colored_Silver_Business_Partner_with_IBM_logo.svg" alt="">
+                        </div>
+                        <div class="row p-0 mb-5">
+                            <div class="col-md-6">
+                                <div class="list">
+                                    <ul class="ps-0">
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Data
+                                            Visualization</li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Descriptive
+                                            Statistics</li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Exploratory Data
+                                            Analysis</li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Model Building
+                                            and Fine Tuning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="list">
+                                    <ul class="ps-0">
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Deep Learning
+                                        </li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Ensemble
+                                            Learning</li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Inferential
+                                            Statistics</li>
+                                        <li><i class="fa fa-check-square-o text-primary pe-2 pb-3"></i> Supervised and
+                                            Unsupervised Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-sm-1" id="enquiry">
+                        <div class="reviews bg-white shadow text-black p-3 border-0 rounded">
+                            <div class="heading mb-5 text-center">
+                                <h5>ADMISSION CLOSES ON </h5>
+                            </div>
+                            <section class="wrapper">
+                                <section id="countdown-container" class="countdown-container">
+                                    <article id="js-countdown" class="countdown">
+                                        <section id="js-days" class="number"></section>
+                                        <section id="js-separator" class="separator">:</section>
+                                        <section id="js-hours" class="number"></section>
+                                        <section id="js-separator" class="separator">:</section>
+                                        <section id="js-minutes" class="number"></section>
+                                        <section id="js-separator" class="separator">:</section>
+                                        <section id="js-seconds" class="number"></section>
+                                    </article>
+                                </section>
+                            </section>
+                            <div class="form">
+                                <form action="send.php" method="post" id="my-form">
+                                    <input class="w-100 px-2 mb-4 border-0 border-bottom rounded" type="text"
+                                        name="name" placeholder="Name*" required>
+                                    <input class="w-100 px-2 mb-4 border-0 border-bottom rounded" type="email"
+                                        name="email" placeholder="Email*" required>
+                                    <input class="w-100 px-2 mb-4 border-0 border-bottom rounded" type="tel"
+                                        name="phone" placeholder="Phone*" required>
+                                    <select name="experience" id="" class="mb-4 border-0 border-bottom w-100">
+                                        <option value="">Total Work Experience</option>
+                                        <option value="No Experience">No Experience</option>
+                                        <option value="0-1">0-1</option>
+                                        <option value="1-3">1-3</option>
+                                        <option value="3-5">3-5</option>
+                                        <option value="5-8">5-8</option>
+                                        <option value="8+">8+</option>
+                                    </select>
+                                    <p><small>By providing your contact details, you agree to our <a href="#"
+                                                class="text-primary">Privacy Policy</a></small></p>
+                                    <input class="w-100 p-2 my-2 bg-primary border rounded text-white fw-bolder"
+                                        type="submit" value="Download Brochure" class="btn btn-secondary" id="submit-form" hidden>
+                                </form>
+                                <button class="w-100 p-2 my-2 bg-primary border rounded text-white fw-bolder" id="download-pdf">Download Brochure</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="programs py-5 " id="programs">
+            <div class="container">
+                <div class="heading mb-4">
+                    <h4 class="fw-bolder">Get Certified, Step Up Your Career with Top Programs</h4>
+                </div>
+                <div class="row align-items-start w-100">
+                    <div class="col-md-3">
+                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link d-none" id="v-pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                aria-selected="true" class="py-3 px-5 border-0">Recommended</button>
+                            <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-profile" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false" class="py-3 px-5 border-0">Data
+                                Science Foundation</button>
+                            <button class="nav-link" id="v-pills-ai-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-ai" type="button" role="tab" aria-controls="v-pills-ai"
+                                aria-selected="false" class="py-3 px-5 border-0">Machine Learning for Data Sci.</button>
+                            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-messages" type="button" role="tab"
+                                aria-controls="v-pills-messages" aria-selected="false"
+                                class="py-3 px-5 border-0">A.I. For Machine learning and Data Science</button>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-pane fade" id="v-pills-home" role="tabpanel"
+                                aria-labelledby="v-pills-home-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="program px-3">
+                                            <div class="card shadow border-0 rounded">
+                                                <img src="images/p1.jpg" alt="" class="img-fluid">
+                                                <div class="program-detail p-3">
+                                                    <div class="cat mb-3">
+                                                        <a href=""
+                                                            class="text-uppercase bg-secondary text-primary text-decoration-none p-1 border rounded">Artificial
+                                                            Intelligence</a>
+                                                    </div>
+                                                    <div class="title pb-3 border-bottom">
+                                                        <h4 class="fw-bolder">IIT G - Executive Program in Data Science
+                                                            & AI </h4>
+                                                    </div>
+                                                    <div class="details py-3">
+                                                        <p>12 Months | Online</p>
+                                                        <p>Admission Deadline: 16 Apr 2023</p>
+                                                    </div>
+                                                    <h5>Explore Program Now ></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="program px-3">
+                                            <div class="card shadow border-0">
+                                                <img src="images/p1.jpg" alt="" class="img-fluid">
+                                                <div class="program-detail p-3">
+                                                    <div class="cat mb-3">
+                                                        <a href=""
+                                                            class="text-uppercase bg-secondary text-primary text-decoration-none p-1 border rounded">Data
+                                                            Science</a>
+                                                    </div>
+                                                    <div class="title pb-3 border-bottom">
+                                                        <h4 class="fw-bolder">IIT G - Advanced Certification in DS & ML
+                                                        </h4>
+                                                    </div>
+                                                    <div class="details py-3">
+                                                        <p>6 Months | Online</p>
+                                                        <p>Admission Deadline: 16 Apr 2023</p>
+                                                    </div>
+                                                    <h5>Explore Program Now ></h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                                aria-labelledby="v-pills-profile-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="details">
+                                            <div class="title">
+                                                <h3>Data Science Foundation</h3>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <!-- <div class="col-md-1"></div> -->
+                                            <div class="col-md-6">
+                                            <div class="body3" >
+                                                <ul>
+                                                    <li>Data Science Project Lifecycle:
+                                                        <ul>
+                                                            <li>Defining project scope and requirements</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Python:
+                                                        <ul>
+                                                            <li>Python programming fundamentals</li>
+                                                            <li>Working with data types, operators, and control structures</li>
+                                                            <li>Functions and modules</li>
+                                                            <li>Object-oriented programming in Python</li>
+                                                            <li>Exception handling and debugging</li>
+                                                            <li>Best practices in Python programming</li>
+                                                            <li>Data Manipulation Libraries:
+                                                                <ul>
+                                                                    <li>Introduction to NumPy and Pandas</li>
+                                                                    <li>Working with arrays, matrices, and data frames</li>
+                                                                    <li>Data cleaning and preprocessing using Pandas</li>
+                                                                    <li>Data aggregation and reshaping</li>
+                                                                    <li>Merging, joining, and grouping data frames</li>
+                                                                </ul>
+                                                            </li>
+                                                            </ul>
+                                                            </li>
+                                                            </ul>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="body3" >
+                                                                    <ul>
+                                                            <li>Basic Stats:
+                                                                <ul>
+                                                                    <li>Statistical concepts and terms</li>
+                                                                    <li>Descriptive statistics: measures of central tendency and dispersion</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Correlation and regression analysis</li>
+                                                            <li>Visualization:
+                                                                <ul>
+                                                                    <li>Introduction to data visualization</li>
+                                                                    <li>Data visualization using Matplotlib and Seaborn</li>
+                                                                    <li>Customizing plots and charts</li>
+                                                                    <li>Data exploration with interactive visualization tools</li>
+                                                                    <li>Best practices in data visualization</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>Intro to R, R Studio:
+                                                                <ul>
+                                                                    <li>R programming fundamentals</li>
+                                                                    <li>Working with data types, operators, and control structures</li>
+                                                                    <li>Data frames and matrices in R</li>
+                                                                    <li>Exploratory data analysis with R</li>
+                                                                    <li>Visualization</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                        </div>
+                                                        </div>
+                                                        <!-- <div class="col-md-1"></div> -->
+                                                    </li>
+                                                </ul>
+                                            
+                                       
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="v-pills-ai" role="tabpanel" aria-labelledby="v-pills-ai-tab"
+                                tabindex="0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="details">
+                                            <div class="title">
+                                                <h3>Machine Learning for Data Science</h3>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                            <div class="body1" >
+                                               
+                                                    <h5>1.Tableau:</h5>
+                                                        <ul>
+                                                            <li>Introduction to Tableau and its interface</li>
+                                                            <li>Creating charts, graphs, and maps in Tableau</li>
+                                                            <li>Connecting to different data sources</li>
+                                                            <li>Working with calculated fields and parameters</li>
+                                                            <li>Using Tableau for data storytelling and presentation</li>
+                                                        </ul>
+                                                   
+                                                   </div>
+                                                </div>
+                                               
+                                                <div class="col-md-5">
+                                                    <div class="body1" >
+                                                    <h5>2.Probability and Random Variable:</h5>
+                                                        <ul>
+                                                            <li>Basic probability concepts and notation</li>
+                                                            <li>Conditional probability and Bayes' theorem</li>
+                                                            <li>Discrete and continuous random variables</li>
+                                                            <li>Probability distributions and their properties</li>
+                                                            <li>Joint and marginal probability distributions</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>3.Distribution:</h5>
+                                                        <ul>
+                                                            <li>Normal distribution and its properties</li>
+                                                            <li>Binomial distribution and its properties</li>
+                                                            <li>Poisson distribution and its properties</li>
+                                                            <li>Exponential distribution and its properties</li>
+                                                            <li>Chi-squared distribution and its properties</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>4.Hypothesis Testing:</h5>
+                                                        <ul>
+                                                            <li>Hypothesis testing process and its components</li>
+                                                            <li>One-sample and two-sample t-tests</li>
+                                                            <li>ANOVA (Analysis of Variance) and F-tests</li>
+                                                            <li>Non-parametric hypothesis tests</li>
+                                                            <li>Power and sample size calculations</li>
+                                                        </ul>
+                                                   </div>
+                                                   </div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>5.Feature Engineering:</h5>
+                                                        <ul>
+                                                            <li>Feature selection techniques</li>
+                                                            <li>Data normalization and scaling</li>
+                                                            <li>Handling missing data</li>
+                                                            <li>Encoding categorical variables</li>
+                                                            <li>Feature extraction techniques</li>
+                                                        </ul>
+                                                   </div>
+                                                   </div>
+                                                   <div class="col-md-5">
+                                                    <div class="body1" >
+                                                    <h5>6.EDA (Exploratory Data Analysis):</h5>
+                                                        <ul>
+                                                            <li>Data cleaning and preprocessing</li>
+                                                            <li>Data visualization techniques</li>
+                                                            <li>Descriptive statistics</li>
+                                                            <li>Outlier detection and removal</li>
+                                                            <li>Data transformation and normalization</li>
+                                                        </ul>
+                                                     </div>
+                                                     </div>
+                                                     <div class="col-md-1"></div>
+                                                     <div class="col-md-1"></div>
+                                                     <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>7.Logistic Regression:</h5>
+                                                        <ul>
+                                                            <li>Binary and multinomial logistic regression</li>
+                                                            <li>Odds ratio and its interpretation</li>
+                                                            <li>Model fitting and diagnostics</li>
+                                                            <li>Regularized logistic regression techniques</li>
+                                                            <li>Applications of logistic regression</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>8.Model Deployment:</h5>
+                                                        <ul>
+                                                            <li>Model deployment strategies and considerations</li>
+                                                            <li>Web deployment with Streamlit</li>
+                                                            <li>Model performance evaluation</li>
+                                                        </ul>
+                                                   </div></div>
+                                                   <div class="col-md-1"></div>
+                                                   <div class="col-md-1"></div>
+                                                   <div class="col-md-5">
+                                                    <div class="body1" >
+                                                    <h5>9.Unsupervised Machine Learning:</h5>
+                                                        <ul>
+                                                            <li>Clustering algorithms (K-means, Hierarchical clustering)</li>
+                                                            <li>Dimensionality reduction techniques (PCA, t-SNE)</li>
+                                                            <li>Association rule mining and market basket analysis</li>
+                                                            <li>Recommender systems and collaborative filtering</li>
+                                                            <li>Anomaly detection techniques</li>
+                                                        </ul>
+                                                     </div>
+                                                     </div>
+                                                     <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5> 10.Decision Trees:</h5>
+                                                        <ul>
+                                                            <li>Decision tree building and splitting criteria</li>
+                                                            <li>Handling missing values and categorical variables</li>
+                                                            <li>Decision tree pruning and regularization</li>
+                                                            <li>Ensemble techniques (Random Forests)</li>
+                                                            <li>Model interpretation and feature importance</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5> 11.Supervised Machine Learning:</h5>
+                                                        <ul>
+                                                            <li>Classification algorithms (Logistic Regression, Naive Bayes)</li>
+                                                            <li>Regularization techniques (Ridge, Lasso, Elastic Net)</li>
+                                                            <li>Support Vector Machines (SVM) for classification and regression</li>
+                                                            <li>Gradient Boosting and AdaBoost</li>
+                                                            <li>Neural networks and deep learning</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="body1" >
+                                                    <h5>12.Case Study:</h5>
+                                                        <ul>
+                                                            <li>Real-world data science project examples</li>
+                                                            <li>End-to-end data science project implementation</li>
+                                                            <li>Best practices and project management strategies</li>
+                                                            <li>Presentation and communication skills for data science professionals</li>
+                                                            <li>Latest trends and developments in data science and machine learning.</li>
+                                                        </ul>
+                                                        </div>
+                                                        </div>
+                                                        <div class="col-md-1"></div>
+                                                    
+                                                <!-- </ol> -->
+                                            </div>
+                                        </div>
+                                    
+                               
+                            
+                            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                                aria-labelledby="v-pills-messages-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="details">
+                                            <div class="title">
+                                                <h3>A.I. For Machine learning and Data Science</h3>
+                                            </div>
+                                            </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                            <div class="body2">
+                                                
+                                                    <h5>1.Neural Network:</h5>
+                                                        <ul>
+                                                            <li>Introduction to artificial neural networks</li>
+                                                            <li>Perceptron and activation functions</li>
+                                                            <li>Multi-layer perceptron and backpropagation algorithm</li>
+                                                            <li>Convolutional neural networks (CNN)</li>
+                                                            <li>Recurrent neural networks (RNN)</li>
+                                                        </ul>
+                                                   </div>
+                                                   </div>
+                                                   <div class="col-md-5">
+                                                    <div class="body2">
+                                                    <h5>2.Text Mining:</h5>
+                                                        <ul>
+                                                            <li>Preprocessing and cleaning text data</li>
+                                                            <li>Text feature extraction techniques</li>
+                                                            <li>Text classification and clustering</li>
+                                                            <li>Topic modeling techniques</li>
+                                                            <li>Sentiment analysis</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-5">
+                                                        <div class="body2">
+                                                    
+                                                    <h5>3.Naive Bayes:</h5>
+                                                        <ul>
+                                                            <li>Probabilistic classification and Bayes' theorem</li>
+                                                            <li>Naive Bayes algorithm and its assumptions</li>
+                                                            <li>Multinomial and Gaussian Naive Bayes</li>
+                                                            <li>Text classification with Naive Bayes</li>
+                                                            <li>Advantages and disadvantages of Naive Bayes</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <div class="body2">
+                                                    <h5>4.Time Series:</h5>
+                                                        <ul>
+                                                            <li>Time series data and its characteristics</li>
+                                                            <li>Time series modeling and decomposition</li>
+                                                            <li>Auto-regressive (AR) and Moving Average (MA) models</li>
+                                                            <li>ARMA and ARIMA models</li>
+                                                            <li>Exponential Smoothing models</li>
+                                                        </ul>
+                                                      </div>
+                                                      </div>
+                                                      <div class="col-md-1"></div>
+                                                      <div class="col-md-1"></div>
+                                                      <div class="col-md-5">
+                                                        <div class="body2">
+
+                                                    <h5>5.Forecasting:</h5>
+                                                        <ul>
+                                                            <li>Evaluation metrics for forecasting models</li>
+                                                            <li>Time series cross-validation techniques</li>
+                                                            <li>Seasonal decomposition and forecasting</li>
+                                                            <li>ARIMA and SARIMA models for forecasting</li>
+                                                            <li>Prophet: a powerful open-source forecasting library</li>
+                                                        </ul>
+                                                     </div>
+                                                     </div>
+                                                     <div class="col-md-5">
+                                                        <div class="body2">
+                                                    <h5>6.Computer Vision:</h5>
+                                                        <ul>
+                                                            <li>Introduction to computer vision</li>
+                                                            <li>Image processing techniques</li>
+                                                            <li>Convolutional neural networks (CNN) for image classification</li>
+                                                            <li>Object detection and localization using CNNs</li>
+                                                            <li>Image segmentation and clustering</li>
+                                                        </ul>
+                                                    </div>
+                                                    </div>
+                                                    <div class="col-md-1"></div>
+                                                <!-- </ol> -->
+                                            </div>
+                                        </div>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="program-highlights py-5 pb-5" id="program-highlights" style="background: #eee;">
+            <div class="container">
+                <div class="heading mb-4">
+                    <h4 class="fw-bolder">Program Highlights</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="highlights">
+                            <div class="title">
+                                <h6>1. Industry-Relevant Curriculum</h6>
+                            </div>
+                            <div class="desc">
+                                <ul>
+                                    <li>Our curriculum is designed to be highly relevant to industry needs, giving you
+                                        the skills and knowledge, you need to succeed in your career.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="highlights">
+                            <div class="title">
+                                <h6>2. Experienced Faculty</h6>
+                            </div>
+                            <div class="desc">
+                                <ul>
+                                    <li>Our faculty members are highly experienced and knowledgeable in their respective
+                                        fields, providing you with valuable insights and mentorship.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="highlights">
+                            <div class="title">
+                                <h6>3. Hands-On Training</h6>
+                            </div>
+                            <div class="desc">
+                                <ul>
+                                    <li>Our programs emphasize hands-on training, so you'll gain practical experience
+                                        working on real-world projects and assignments.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="highlights">
+                            <div class="title">
+                                <h6>4. Affordable Education</h6>
+                            </div>
+                            <div class="desc">
+                                <ul>
+                                    <li>We offer quality education at an affordable cost, so you can achieve your career
+                                        goals without breaking the bank.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="highlight bg-light p-4 mb-5 border-0 rounded" style="background: #fff !important;">
+                            <h6 class="fw-bolder">Who is this Program for</h6>
+                            <small>Professionals with an analytical mindset, looking to transition into the field of
+                                Data Science, with preferably 2+ years of formal work experience are most suited for
+                                this program</small>
+                        </div>
+                        <div class="highlight bg-light p-4 border-0 rounded" style="background: #fff !important;">
+                            <h6 class="fw-bolder">Who is this Program for</h6>
+                            <small>Professionals with an analytical mindset, looking to transition into the field of
+                                Data Science, with preferably 2+ years of formal work experience are most suited for
+                                this program</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clients py-5">
+            <div class="container">
+                <div class="heading mb-4">
+                    <h4 class="fw-bolder">Tools Covered</h4>
+                </div>
+                <div class="row g-2">
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/1.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/2.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/3.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/4.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/5.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/6.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/7.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/8.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/9.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/10.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/11.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                    <div class="col-6 col-md-2 px-1 py-0">
+                        <img src="images/tools/12.jpg" alt="" class="img-fluid w-100 shadow p-1">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects">
+            <div class="container">
+                <div class="heading mb-4">
+                    <h4 class="fw-bolder">Industry Projects</h4>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="project border rounded mb-4">
+                            <div class="head bg-light border-top border-primary border-5 p-3">
+                                <div class="subtitle mb-3"><small>Project 1</small></div>
+                                <div class="title">
+                                    <h6 class="fw-bolder">E-commerce Optimization Project</h6>
+                                </div>
+                            </div>
+                            <div class="body p-3">
+                                <p>Worked with a leading e-commerce company to optimize their website for improved user
+                                    experience, resulting in a 15% increase in conversion rates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project border rounded mb-4">
+                            <div class="head bg-light border-top border-primary border-5 p-3">
+                                <div class="subtitle mb-3"><small>Project 2</small></div>
+                                <div class="title">
+                                    <h6 class="fw-bolder">Social Media Marketing Campaign</h6>
+                                </div>
+                            </div>
+                            <div class="body p-3">
+                                <p>Developed and executed a social media marketing campaign for a startup, resulting in
+                                    a 40% increase in website traffic and a 20% increase in sales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project border rounded mb-4">
+                            <div class="head bg-light border-top border-primary border-5 p-3">
+                                <div class="subtitle mb-3"><small>Project 3</small></div>
+                                <div class="title">
+                                    <h6 class="fw-bolder">Data Analysis and Visualization Project</h6>
+                                </div>
+                            </div>
+                            <div class="body p-3">
+                                <p>Analysed and visualized customer data for a retail company, resulting in actionable
+                                    insights that improved customer retention by 25%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project border rounded mb-4">
+                            <div class="head bg-light border-top border-primary border-5 p-3">
+                                <div class="subtitle mb-3"><small>Project 4</small></div>
+                                <div class="title">
+                                    <h6 class="fw-bolder">Machine Learning Model Development</h6>
+                                </div>
+                            </div>
+                            <div class="body p-3">
+                                <p>Developed a machine learning model for a healthcare organization to predict patient
+                                    outcomes, resulting in a 90% accuracy rate and improved patient care.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project border rounded mb-4">
+                            <div class="head bg-light border-top border-primary border-5 p-3">
+                                <div class="subtitle mb-3"><small>Project 5</small></div>
+                                <div class="title">
+                                    <h6 class="fw-bolder">Cybersecurity Risk Assessment</h6>
+                                </div>
+                            </div>
+                            <div class="body p-3">
+                                <p>Conducted a comprehensive cybersecurity risk assessment for a financial services
+                                    company, resulting in the identification and mitigation of critical vulnerabilities
+                                    and the implementation of best practices to prevent future attacks.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq py-5" id="faqs">
+            <div class="container">
+                <div class="heading mb-4">
+                    <h4 class="fw-bolder">FAQs</h4>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What Are
+                                The Different Career Prospects After The Completion Of A Data Science Course In
+                                Mumbai?</button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Upon the completion of the data science training, one will be counted as an
+                                        important part of the decision-making team. Some of the positions that one can
+                                        target are:
+                                        <ul>
+                                            <li>Data analysts</li>
+                                            <li>Big data specialists</li>
+                                            <li>Data scientists</li>
+                                            <li>Business analysts</li>
+                                            <li>Market analysts</li>
+                                            <li>Research analysts</li>
+                                            <li>Business analyst consultants</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">What Is
+                                The Academic Requirement To Receive The Data Science Certification?</button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Anybody can receive the data science certification or data science online
+                                        certification but some of the desired skills are:
+                                        <ul>
+                                            <li>Analytical skills</li>
+                                            <li>Problem-solving mindset</li>
+                                            <li>Mathematical affinity</li>
+                                            <li>Business knowledge</li>
+                                            <li>Communication skills</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">What
+                                Is The Expected Salary After Completing The Data Science Courses?</button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>The expected salary brackets after the data science training depends on
+                                        experience and skills-building. What one can expect to earn is:
+                                        <ul>
+                                            <li>Base level/fresher: up to 5 lakhs</li>
+                                            <li>Intermediate stage: up to 8 lakhs</li>
+                                            <li>Experience data scientists: up to 12.5 lakhs</li>
+                                            <li>Advanced stage: up to 18 lakhs</li>
+                                            <li>Data science expert: up to 25 lakhs</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">How
+                                Will The Data Science Course Lectures And Sessions Take Place?</button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Here at Salems I.T. data science certification and data science online
+                                        certification course, one can be a part of the most fluid and easy build
+                                        sessions. One can attend the classroom lectures, they can also be a part of the
+                                        live online sessions and later can watch the recorded sessions for a better
+                                        understanding of the data science courses.</li>
+                                </ul>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">How Does
+                                The Live Instructor Led Online Session Of The Data Science Online Certification
+                                Work?</button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>In the live session of the data science online certification, one will have to
+                                        log in at the recommended time and the instructor will also do the same to give
+                                        a live lecture for the data science course. One can also interact and ask
+                                        questions during the live session of the data science course.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">How
+                                Can I Become Data Scientist?</button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>If you are very new to the data science terminology and do not know anything
+                                        about the DS then you are at the perfect place.<br>
+                                        Data Science is the combination of Stats,Math and Computer Science concepts.
+                                        Salems I.T. Mumbai is known to be the best Data Science career coach and we teach all
+                                        the topics from very vary basics to advanced and latest algorithms which are
+                                        popular in the industry.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">What
+                                Is Data Science Course?</button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Data science course covers the methods / techniques / technologies to extract
+                                        the valuable information from raw data. Stats, Math and algorithms from computer
+                                        science are the main topics in Data Science.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">Where
+                                Can I Study Data Science In Mumbai?</button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Data science course covers the methods / techniques / technologies to extract
+                                        the valuable information from raw data. Stats, Math and algorithms from computer
+                                        science are the main topics in Data Science.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEleven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEleven" aria-expanded="false"
+                                aria-controls="collapseEleven">Which Data Science Course Is Best In Mumbai?</button>
+                        </h2>
+                        <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Salems I.T. offers the best Data Science course in Mumbai that covers Statistics from
+                                        basics, Machine learning- Unsupervised and supervised learning algorithms, Text
+                                        mining/ Natural Language Processing (NLP) and Forecasting. Also covers various
+                                        popular tools / programming languages which are essential for data scientists.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwelve">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwelve" aria-expanded="false"
+                                aria-controls="collapseTwelve">What Do You Need To Be A Data Scientist?</button>
+                        </h2>
+                        <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Anyone who has bachelor degree and learning zeal can become data scientist. You
+                                        need to learn stats, Math and computer science algorithms.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThirteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThirteen" aria-expanded="false"
+                                aria-controls="collapseThirteen">How Can One Clear Their Query Regarding Lectures And
+                                Sessions Of The Data Science Course In Mumbai?</button>
+                        </h2>
+                        <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Every participant will be part of the whatsapp group along with the trainers.
+                                        You would be just whatsapp away to clarify your doubts. One can clear their
+                                        doubts about data science training classes and lectures through the website by
+                                        chatting with the customer executives, or by sending an email to
+                                        enquiry@Salems I.T..com or also by calling the toll free number 1-800-212-2120 and
+                                        800 800 9706 (India), 203-514-6638 (United Kingdom), +1(281) 971-3065 (USA),
+                                        128-520-3240 (Australia) to contact our best data science institutes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFourteen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFourteen" aria-expanded="false"
+                                aria-controls="collapseFourteen">Will A Certificate Be Provided At The End After
+                                Completing The Data Science Online Certification Or Data Science Certification?</button>
+                        </h2>
+                        <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Yes, one will be provided with a data science course certificate from Salems I.T. at
+                                        the end of the data science training.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary text-white fw-light py-5 pb-5 pb-sm-4" id="footer">
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-md-1 px-sm-1 mb-4 mb-sm-0"></div>
+                <div class="col-md-5 px-sm-1 mb-4 mb-sm-0">
+                    <img src="images/footer-logo.png" alt="" class="img-fluid mb-2">
+                    <p><i class="fa fa-map-marker"></i> Mumbai | Indore | Chennai</p>
+                        <a href="tel:+917977426509" class="text-decoration-none text-white" target="_blank"><i class="fa fa-phone"></i> 7977426509</p>
+                        <a href="mailto:enquiry@salemsit.org.in" class="text-decoration-none text-white" target="_blank"><i class="fa fa-envelope"></i>&nbsp enquiry@salemsit.org.in</a>
+                </div>
+                <div class="col-md-4 px-sm-1 mb-4 mb-sm-0">
+                    
+                </div>
+                <div class="col-md-2 px-sm-1 mb-0 ">
+                    <div class="sk2">
+                      
+                    <h5 class="mb-3" style="text-align: right;    padding-right: 25px ;">Connect With Us</h5>
+                    <div class="social d-flex align-items-center sk1" >
+                        <a href="https://www.facebook.com/salemsit" class="text-decoration-none text-primary" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/salemsit/" class="text-decoration-none text-primary" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/SALEMS_IT/" class="text-decoration-none text-primary" target="_blank"><i class="fa fa-instagram"></i></a>
+                    </div>
+                    <div class="sk">
+                        
+                        <img src="images/aicte1.png" alt="" class="img-fluid me-3">
+                    <img src="images/nsdc1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </footer>
+    <section class="fix-btn py-3 bg-light fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 px-sm-1">
+                    <div class="row p-0">
+                        <div class="col-md-4 d-none d-sm-block">
+                            <div class="usp">
+                                <a href="tel:+917977426509" target="_blank" class="mb-0 text-decoration-none text-dark"><i
+                                        class="fa fa-phone text-primary pe-2"></i> Call Us On +91 7977426509 </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 d-none d-sm-block">
+                            <div class="usp">
+                                <a href="tel:+917977426509" target="_blank" class="mb-0 text-decoration-none text-dark"><i
+                                        class="fa fa-volume-control-phone text-primary pe-2"></i> Request Call Back </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="live-chat">
+                                <a href="https://wa.me/917977426509?text=Hello, I'm interested in learning more about the courses you offer. Could you provide me with additional information about your programs, including topics covered, course format, and instructor qualifications? I'm excited to learn more about your offerings and see how your courses can help me achieve my professional and personal goals. Thank you!" target="_blank"
+                                    class="mb-0 text-decoration-none text-white bg-primary"><i
+                                        class="fa fa-comments-o text-white pe-2"></i> Live Chat </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="phone-fix fixed-bottom d-block d-sm-none">
+        <a href="tel:+917977426509" target="_blank"><img src="images/phone.png" alt=""></a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var targetDate = new Date(Date.UTC(2017, 3, 01));
+            var now = new Date();
+            window.days = daysBetween(now, targetDate);
+            var secondsLeft = secondsDifference(now, targetDate);
+            window.hours = Math.floor(secondsLeft / 60 / 60);
+            secondsLeft = secondsLeft - (window.hours * 60 * 60);
+            window.minutes = Math.floor(secondsLeft / 60);
+            secondsLeft = secondsLeft - (window.minutes * 60);
+            console.log(secondsLeft);
+            window.seconds = Math.floor(secondsLeft);
+            startCountdown();
+        });
+        var interval;
+        function daysBetween(date1, date2) {
+            //Get 1 day in milliseconds
+            var one_day = 1000 * 60 * 60 * 24;
+            // Convert both dates to milliseconds
+            var date1_ms = date1.getTime();
+            var date2_ms = date2.getTime();
+            // Calculate the difference in milliseconds
+            var difference_ms = date2_ms - date1_ms;
+            // Convert back to days and return
+            return Math.round(difference_ms / one_day);
+        }
+        function secondsDifference(date1, date2) {
+            //Get 1 day in milliseconds
+            var one_day = 1000 * 60 * 60 * 24;
+            // Convert both dates to milliseconds
+            var date1_ms = date1.getTime();
+            var date2_ms = date2.getTime();
+            var difference_ms = date2_ms - date1_ms;
+            var difference = difference_ms / one_day;
+            var offset = difference - Math.floor(difference);
+            return offset * (60 * 60 * 24);
+        }
+        function startCountdown() {
+            $('#input-container').hide();
+            $('#countdown-container').show();
+            displayValue('#js-days', window.days);
+            displayValue('#js-hours', window.hours);
+            displayValue('#js-minutes', window.minutes);
+            displayValue('#js-seconds', window.seconds);
+            interval = setInterval(function () {
+                if (window.seconds > 0) {
+                    window.seconds--;
+                    displayValue('#js-seconds', window.seconds);
+                } else {
+                    // Seconds is zero - check the minutes
+                    if (window.minutes > 0) {
+                        window.minutes--;
+                        window.seconds = 59;
+                        updateValues('minutes');
+                    } else {
+                        // Minutes is zero, check the hours
+                        if (window.hours > 0) {
+                            window.hours--;
+                            window.minutes = 59;
+                            window.seconds = 59;
+                            updateValues('hours');
+                        } else {
+                            // Hours is zero
+                            window.days--;
+                            window.hours = 23;
+                            window.minutes = 59;
+                            window.seconds = 59;
+                            updateValues('days');
+                        }
+                        // $('#js-countdown').addClass('remove');
+                        // $('#js-next-container').addClass('bigger');
+                    }
+                }
+            }, 1000);
+        }
+        function updateValues(context) {
+            if (context === 'days') {
+                displayValue('#js-days', window.days);
+                displayValue('#js-hours', window.hours);
+                displayValue('#js-minutes', window.minutes);
+                displayValue('#js-seconds', window.seconds);
+            } else if (context === 'hours') {
+                displayValue('#js-hours', window.hours);
+                displayValue('#js-minutes', window.minutes);
+                displayValue('#js-seconds', window.seconds);
+            } else if (context === 'minutes') {
+                displayValue('#js-minutes', window.minutes);
+                displayValue('#js-seconds', window.seconds);
+            }
+        }
+        function displayValue(target, value) {
+            var newDigit = $('<span></span>');
+            $(newDigit).text(pad(value))
+                .addClass('new');
+            $(target).prepend(newDigit);
+            $(target).find('.current').addClass('old').removeClass('current');
+            setTimeout(function () {
+                $(target).find('.old').remove();
+                $(target).find('.new').addClass('current').removeClass('new');
+            }, 900);
+        }
+        function pad(number) {
+            return ("0" + number).slice(-2);
+        }
+    </script>
+    <script>
+        const downloadPdf = document
+            .querySelector("#download-pdf");
+  
+        const submitForm = document
+            .querySelector("#submit-form");
+  
+        downloadPdf.addEventListener("click", () => {
+  
+            // Creating the element anchor that
+            // will download pdf
+            let element = document.createElement("a");
+            element.href = "brochure.pdf";
+            element.download = "brochure.pdf";
+  
+            // Adding the element to body
+            document.documentElement.appendChild(element);
+  
+            // Above code is equivalent to
+            // <a href="path of file" download="file name"> 
+  
+            // onClick property, to trigger download
+            element.click();
+  
+            // Removing the element from body
+            document.documentElement.removeChild(element);
+  
+             // onClick property, to trigger submit form
+            submitForm.click();
+        });
+    </script>
+</body>
+</html>

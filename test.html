@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lottie Animation Example</title>
+  <!-- Include Lottie library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+  <style>
+    #animationContainer {
+      width: 200px; /* Adjust the width as needed */
+      height: 200px; /* Adjust the height as needed */
+      display: none; /* Initially hide the animation container */
+    }
+  </style>
+</head>
+<body>
+  <button onclick="playAnimation()">Click Me</button>
+  <div id="animationContainer"></div>
+  
+  <script>
+    let animationPlayed = false; // Track if animation has been played
+
+    function playAnimation() {
+      if (!animationPlayed) {
+        const animationContainer = document.getElementById('animationContainer');
+
+        // Initialize Lottie animation
+        const animation = lottie.loadAnimation({
+          container: animationContainer,
+          renderer: 'svg', // Change to 'canvas' if needed
+          loop: true,
+          autoplay: true, // Auto-play the animation
+          path: 'https://raw.githubusercontent.com/slmsshk/slmsshk.github.io/main/r.json' // Animation JSON URL
+        });
+
+        // Show the animation container
+        animationContainer.style.display = 'block';
+
+        animationPlayed = true; // Set animation as played
+      }
+    }
+  </script>
+</body>
+</html>
